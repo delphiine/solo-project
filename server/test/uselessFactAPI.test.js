@@ -3,7 +3,7 @@ const Api = require('../controllers/uselessFactAPI');
 require('jest-fetch-mock').enableFetchMocks()
 
 describe('UselessFactAPI', () => {
-  it('loads a random fact from the Useless API', () => {
+  it('loads a random fact from the Useless Facts API', () => {
     const api = new Api();
 
     fetch.mockResponseOnce(JSON.stringify("Random fact"));
@@ -13,7 +13,7 @@ describe('UselessFactAPI', () => {
     });
   });
 
-  it('loads a daily fact from the Useless API', () => {
+  it('loads a daily fact from the Useless Facts API', () => {
     const api = new Api();
 
     fetch.mockResponseOnce(JSON.stringify("Daily fact"));
