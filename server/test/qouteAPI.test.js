@@ -3,7 +3,7 @@ const Api = require('../controllers/qouteAPI');
 require('jest-fetch-mock').enableFetchMocks()
 
 describe('QouteAPI', () => {
-  it('loads a random Qoute from the Useless API', () => {
+  it('loads a random Qoute from the Qoutes API', () => {
     const api = new Api();
 
     fetch.mockResponseOnce(JSON.stringify("Random qoute"));
@@ -13,7 +13,7 @@ describe('QouteAPI', () => {
     });
   });
 
-  it('loads a daily Qoute from the Useless API', () => {
+  it('loads a daily Qoute from the Qoutes API', () => {
     const api = new Api();
 
     fetch.mockResponseOnce(JSON.stringify("Daily qoute"));
